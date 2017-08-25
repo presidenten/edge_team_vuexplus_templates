@@ -5,7 +5,6 @@
       <option name="CSS" value="false" />
       <option name="Handlebars" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
-      <option name="JSON" value="false" />
       <option name="OTHER" value="true" />
       <option name="TypeScript" value="false" />
       <option name="XML" value="false" />
@@ -23,112 +22,112 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="newtest" value="import { createLogger } from '@edge/log';&#10;import $varname$ from './$name$-substore.js';&#10;&#10;const log = createLogger('$name$'); // eslint-disable-line&#10;&#10;const { getters, actions, mutations } = $varname$;&#10;&#10;describe('Components: $name$', () =&gt; {&#10;  let state;&#10;  let context;&#10;  beforeEach(() =&gt; {&#10;    state = {&#10;      items: [],&#10;    };&#10;    context = {&#10;      state,&#10;      dispatch: jest.fn(),&#10;      commit: jest.fn(),&#10;    };&#10;  });&#10;&#10;  describe('Getters', () =&gt; {&#10;    it('$END$xyz should return something', () =&gt; {&#10;      expect(getters.xyz(state)).toEqual(state.xyz);&#10;    });&#10;  });&#10;&#10;  describe('Actions', () =&gt; {&#10;    it('abc should commit mutation', () =&gt; {&#10;      actions.abc(context);&#10;&#10;      expect(context.commit).toBeCalledWith('asd');&#10;    });&#10;  });&#10;&#10;  describe('Mutations', () =&gt; {&#10;    it('asd should do something', () =&gt; {&#10;      mutations.asd(state);&#10;&#10;      expect(state.xyz).toEqual('something');&#10;    });&#10;  });&#10;});&#10;" toReformat="false" toShortenFQNames="true">
+  <template name="newtest" value="import { createLogger } from '@edge/log';&#10;import $varname$ from './$name$-substore.js';&#10;&#10;const log = createLogger('$name$'); // eslint-disable-line&#10;&#10;const { getters, actions, mutations } = $varname$;&#10;&#10;describe('Components: $name$', () =&gt; {&#10;  let state;&#10;  let context;&#10;  beforeEach(() =&gt; {&#10;    state = {&#10;      items: [],&#10;    };&#10;    context = {&#10;      state,&#10;      dispatch: jest.fn(),&#10;      commit: jest.fn(),&#10;    };&#10;  });&#10;&#10;  describe('Getters', () =&gt; {&#10;    it('$END$xyz should return something', () =&gt; {&#10;      expect(getters.xyz(state)).toEqual(state.xyz);&#10;    });&#10;  });&#10;&#10;  describe('Actions', () =&gt; {&#10;    it('abc should commit mutation', () =&gt; {&#10;      actions.abc(context);&#10;&#10;      expect(context.commit).toBeCalledWith('asd');&#10;    });&#10;  });&#10;&#10;  describe('Mutations', () =&gt; {&#10;    it('asd should do something', () =&gt; {&#10;      mutations.asd(state);&#10;&#10;      expect(state.xyz).toEqual('something');&#10;    });&#10;  });&#10;});&#10;" description="New jest test" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="newstore" value="// Libraries&#10;import { store } from 'vuex+';&#10;import { createLogger } from '@edge/log';&#10;import localeSvc from '@edge/locale'; // eslint-disable-line&#10;// Internal&#10;// import ...&#10;&#10;const log = createLogger('$name$'); // eslint-disable-line&#10;&#10;const initialState = {&#10;  $END$xyz: 0,&#10;};&#10;&#10;const getters = {&#10;  xyz: state =&gt; state.xyz,&#10;};&#10;&#10;const actions = {&#10;  abc(context, data) {&#10;    context.commit('cde', data);&#10;  },&#10;};&#10;&#10;const mutations = {&#10;  cde(state, data) {&#10;    state.xyz = data;&#10;  },&#10;};&#10;&#10;&#10;export default store({&#10;  state: initialState,&#10;  getters,&#10;  actions,&#10;  mutations,&#10;});&#10;" toReformat="false" toShortenFQNames="true">
+  <template name="newstore" value="// Libraries&#10;import { store } from 'vuex+';&#10;import { createLogger } from '@edge/log';&#10;import localeSvc from '@edge/locale'; // eslint-disable-line&#10;// Internal&#10;// import ...&#10;&#10;const log = createLogger('$name$'); // eslint-disable-line&#10;&#10;const initialState = {&#10;  $END$xyz: 0,&#10;};&#10;&#10;const getters = {&#10;  xyz: state =&gt; state.xyz,&#10;};&#10;&#10;const actions = {&#10;  abc(context, data) {&#10;    context.commit('cde', data);&#10;  },&#10;};&#10;&#10;const mutations = {&#10;  cde(state, data) {&#10;    state.xyz = data;&#10;  },&#10;};&#10;&#10;&#10;export default store({&#10;  state: initialState,&#10;  getters,&#10;  actions,&#10;  mutations,&#10;});&#10;" description="New vuex+ module" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="beforeEach" value="beforeEach(() =&gt; {&#10;  $END$&#10;});" toReformat="false" toShortenFQNames="true">
+  <template name="beforeEach" value="beforeEach(() =&gt; {&#10;  $END$&#10;});" description="Before each block" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="afterEach" value="afterEach(() =&gt; {&#10;  $END$&#10;});" toReformat="false" toShortenFQNames="true">
+  <template name="afterEach" value="afterEach(() =&gt; {&#10;  $END$&#10;});" description="After each block" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="describe" value="describe('$desc$', () =&gt; {&#10;  it('$it$', () =&gt; {&#10;    expect($END$true).toEqual(true);&#10;  });&#10;});" toReformat="false" toShortenFQNames="true">
+  <template name="describe" value="describe('$desc$', () =&gt; {&#10;  it('$it$', () =&gt; {&#10;    expect($END$true).toEqual(true);&#10;  });&#10;});" description="Describe block" toReformat="false" toShortenFQNames="true">
     <variable name="desc" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="it" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="it" value="it('$it$', () =&gt; {&#10;  expect($END$true).toEqual(true);&#10;});" toReformat="false" toShortenFQNames="true">
+  <template name="it" value="it('$it$', () =&gt; {&#10;  expect($END$true).toEqual(true);&#10;});" description="It each block" toReformat="false" toShortenFQNames="true">
     <variable name="it" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="clog" value="console.log('$varname$', $varname$$END$); // eslint-disable-line" toReformat="false" toShortenFQNames="true">
+  <template name="clog" value="console.log('$varname$', $varname$$END$); // eslint-disable-line" description="Console log variable" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="cinfo" value="console.info('$varname$', $varname$$END$); // eslint-disable-line" toReformat="false" toShortenFQNames="true">
+  <template name="cinfo" value="console.info('$varname$', $varname$$END$); // eslint-disable-line" description="Console info log variable" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="cwarn" value="console.warn('$varname$', $varname$$END$); // eslint-disable-line" toReformat="false" toShortenFQNames="true">
+  <template name="cwarn" value="console.warn('$varname$', $varname$$END$); // eslint-disable-line" description="Console warn log variable" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="cerror" value="console.error('$varname$', $varname$$END$); // eslint-disable-line" toReformat="false" toShortenFQNames="true">
+  <template name="cerror" value="console.error('$varname$', $varname$$END$); // eslint-disable-line" description="Console error log variable" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="more" value="'$varname$', $varname$,$END$" toReformat="false" toShortenFQNames="true">
+  <template name="more" value="'$varname$', $varname$,$END$" description="Add another variable to log" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="lintskipline" value="// eslint-disable-line" toReformat="false" toShortenFQNames="true">
+  <template name="lintskipline" value="// eslint-disable-line" description="Eslint skip line" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="lintskiplinenext" value="// eslint-disable-next-line" toReformat="false" toShortenFQNames="true">
+  <template name="lintskiplinenext" value="// eslint-disable-next-line" description="Eslint skip next line" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="lintskipfile" value="/* eslint-disable */" toReformat="false" toShortenFQNames="true">
+  <template name="lintskipfile" value="/* eslint-disable */" description="Eslint skip file" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="trace" value="log.trace('$varname$', $varname$$END$);" toReformat="false" toShortenFQNames="true">
+  <template name="trace" value="log.trace('$varname$', $varname$$END$);" description="Trace log variable" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="info" value="log.info('$varname$', $varname$$END$);" toReformat="false" toShortenFQNames="true">
+  <template name="info" value="log.info('$varname$', $varname$$END$);" description="Info log variable" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="debug" value="log.debug('$varname$', $varname$$END$);" toReformat="false" toShortenFQNames="true">
+  <template name="debug" value="log.debug('$varname$', $varname$$END$);" description="Debug log variable" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="warn" value="log.warn('$varname$', $varname$$END$);" toReformat="false" toShortenFQNames="true">
+  <template name="warn" value="log.warn('$varname$', $varname$$END$);" description="Warn log variable" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="error" value="log.error('$varname$', $varname$$END$);" toReformat="false" toShortenFQNames="true">
+  <template name="error" value="log.error('$varname$', $varname$$END$);" description="Error log variable" toReformat="false" toShortenFQNames="true">
     <variable name="varname" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
